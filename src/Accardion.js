@@ -13,11 +13,22 @@ useEffect(()=>{
 
             {products.map(product => (
                 <>
-                    <Accordion.Item eventkey="0" className='item'>
+                    <Accordion.Item eventKey='0'  className='item'>
                         <Accordion.Header>
                             {product.name}
                         </Accordion.Header>
                         <Accordion.Body>
+                            return(
+                            {products.children.map(child => (<>
+                                <Accordion.Item eventKey='0'  className='item'>
+                                    <Accordion.Header>
+                                        {child.name}
+                                    </Accordion.Header>
+                                    <Accordion.Body>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </>))}
+                            )
                            
                         </Accordion.Body>
                     </Accordion.Item>
